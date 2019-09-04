@@ -1,7 +1,7 @@
 Models
 
   -Teachers
-    username :string
+    name :string
     email :string
     password-digest :string
     course_level :integer (1-5)
@@ -10,7 +10,7 @@ Models
 
 
   -Students
-    username :string
+    name :string
     email :string
     password-digest :string
     course_level :integer (1-5)
