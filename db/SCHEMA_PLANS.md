@@ -1,19 +1,22 @@
 Models
 
   -Teachers
-    Username
-    email
-    password-digest
+    username :string
+    email :string
+    password-digest :string
+    course_level :integer (1-5)
 
   -Students
-    Username
-    email
-    password-digest
+    username :string
+    email :string
+    password-digest :string
+    course_level :integer (1-5)
 
   -Materials
-    Url
-    Course level
+    url :string
+    course_level :integer (1-5)
 
   -Assignments
-    material_id
-    student_id
+    material_id :integer
+    student_id :integer
+    mark_as_viewed :boolean
