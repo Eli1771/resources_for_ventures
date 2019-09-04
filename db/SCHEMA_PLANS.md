@@ -28,6 +28,8 @@ Models
 
 
   -Materials
+    name :string
+    description :string
     url :string
     course_level :integer (1-5)
 
