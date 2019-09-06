@@ -1,4 +1,4 @@
-class Student < ApplicationRecord
+class User < ApplicationRecord
   has_many :student_teachers
   has_many :teachers, through: :student_teachers
   has_many :assignments

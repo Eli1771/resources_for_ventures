@@ -10,40 +10,6 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_04_184348) do
-
-  create_table "assignments", force: :cascade do |t|
-    t.integer "material_id"
-    t.integer "student_id"
-    t.boolean "mark_as_viewed"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "materials", force: :cascade do |t|
-    t.string "name"
-    t.string "description"
-    t.string "url"
-    t.integer "course_level"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "student_teachers", force: :cascade do |t|
-    t.integer "student_id"
-    t.integer "teacher_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "users", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password_digest"
-    t.integer "course_level"
-    t.boolean "is_teacher"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
+ActiveRecord::Schema.define(version: 0) do
 
 end
