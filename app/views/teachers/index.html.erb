@@ -1,0 +1,7 @@
+<h1>All Teachers</h1>
+
+<ul>
+  <% @teachers.each do |teacher| %>
+    <li><%= link_to "#{teacher.name} - #{teacher.course.name}", teacher.correct_user_path %></li>
+  <% end %>
+</ul>
