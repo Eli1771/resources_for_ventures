@@ -36,20 +36,12 @@ ActiveRecord::Schema.define(version: 2019_09_04_184348) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "students", force: :cascade do |t|
+  create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
     t.string "password_digest"
     t.integer "course_level"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "teachers", force: :cascade do |t|
-    t.string "name"
-    t.string "email"
-    t.string "password_digest"
-    t.integer "course_level"
+    t.boolean "is_teacher"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

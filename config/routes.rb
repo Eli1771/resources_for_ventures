@@ -1,9 +1,8 @@
 Rails.application.routes.draw do
   resources :assignments
   resources :materials
+  resources :users
   resources :student_teachers
-  resources :students, only: [:index, :show]
-  resources :teachers, only: [:index, :show]
 
   get '/signup', to: 'users#new'
   post '/signup', to: 'users#create'

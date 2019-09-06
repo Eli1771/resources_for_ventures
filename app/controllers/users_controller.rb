@@ -3,7 +3,11 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.create(user_params)
+    if params[:is_teacher]
+      @user = Teacher.create(user_params)
+    else
+      @user = Student.create(user_params)
+    end 
     session[:user_id] = @user.id
     redirect_to user_path(@user)
   end
