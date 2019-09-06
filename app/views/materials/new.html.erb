@@ -1,6 +1,6 @@
 <h1>Create new study materials</h1>
 
-<%= form_for :material do |f| %>
+<%= form_for :material, {url: '/materials'} do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %><br>
   <%= f.label 'Description (optional)' %>
