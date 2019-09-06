@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+levels = ['Basic', 'Level 1', 'Level 2', 'Level 3', 'Level 4']
+
+levels.each do |level|
+  Course.create(name: level)
+end
