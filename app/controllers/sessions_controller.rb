@@ -6,11 +6,7 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: session_params[:email])
     if @user && @user.authenticate(session_params[:password])
       session[:user_id] = @user.id
-      if @user.is_teacher
-        redirect_to "/teachers/#{@user.id}"
-      else
-        redirect_to "/students/#{@user.id}"
-      end
+      correct_user_path(@user)
     else
       redirect_to signin_path
     end
