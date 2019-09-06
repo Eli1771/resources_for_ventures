@@ -7,8 +7,8 @@
   <%= f.text_field :email %><br>
   <%= f.label :password %>
   <%= f.password_field :password %><br>
-  <%= f.label 'Course Level (0 - 4)' %>
-  <%= f.number_field :course_id %><br>
+  <%= f.label :course_id, 'Course' %>
+  <%= f.collection_select :course_id, Course.all, :name, :id %><br>
   <%= f.label 'Check this box if you are an instructor' %>
   <input type="checkbox" name="user[is_teacher]" id="is_teacher"><br><br>
 
