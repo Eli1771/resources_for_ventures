@@ -23,6 +23,16 @@ users = [
   {name: 'Marty', email: 'marty@fake.com', password: p, course_id: 4, is_teacher: false}
 ]
 
+materials = [
+  {name: 'Google', description: 'A very good search engine', url: 'www.google.com', course_id: 3},
+  {name: 'Google Translator', url: 'translate.google.com', course_id: 1},
+  {name: 'Grammar 101', url: 'www.englishgrammar101.com', course_id: 1},
+  {name: 'Grammar 101', url: 'www.englishgrammar101.com', course_id: 3},
+  {name: '100 Words', url: 'www.ef.com/wwen/english-resources/english-vocabulary/top-100-words', course_id: 1},
+  {name: 'Past Tense', url: 'www.wordhippo.com/what-is/the-past-tense-of/help.html', course_id: 3},
+
+]
+
 levels.each do |level|
   Course.create(name: level)
 end
@@ -30,3 +40,7 @@ end
 users.each do |user|
   User.create(user)
 end
+
+materials.each do |material|
+  Material.create(material)
+end 
