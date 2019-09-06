@@ -15,4 +15,10 @@ class User < ApplicationRecord
   def type
     self.is_teacher ? 'Teacher' : 'Student'
   end
+
+  def default_values
+    if self.is_teacher.nil?
+      self.is_teacher = false
+    end 
+  end
 end
