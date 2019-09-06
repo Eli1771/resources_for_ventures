@@ -1,6 +1,6 @@
 <h1>Create an assignment</h1>
 
-<%= form_for :assignment do |f| %>
+<%= form_for :assignment, {url: '/assignments'} do |f| %>
   <%= f.label 'For: ' %>
   <%= f.collection_select :student_id, User.students, :id, :name %><br>
   <%= f.label 'Material' %>
