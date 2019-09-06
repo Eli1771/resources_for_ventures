@@ -30,7 +30,6 @@ materials = [
   {name: 'Grammar 101', url: 'www.englishgrammar101.com', course_id: 3},
   {name: '100 Words', url: 'www.ef.com/wwen/english-resources/english-vocabulary/top-100-words', course_id: 1},
   {name: 'Past Tense', url: 'www.wordhippo.com/what-is/the-past-tense-of/help.html', course_id: 3},
-
 ]
 
 levels.each do |level|
@@ -43,4 +42,4 @@ end
 
 materials.each do |material|
   Material.create(material)
-end 
+end
