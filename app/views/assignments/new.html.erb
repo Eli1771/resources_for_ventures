@@ -1,0 +1,12 @@
+<h1>Create an assignment</h1>
+
+<%= form_for :assignment do |f| %>
+  <%= f.label 'For: ' %>
+  <%= f.collection_select :student_id, User.students, :id, :name %><br>
+  <%= f.label 'Material' %>
+  <%= f.collection_select :material_id, Material.all, :id, :name %><br>
+  <%= f.label 'Check so student can mark as viewed' %>
+  <%= f.check_box :mark_as_viewed %><br>
+
+  <%= f.submit %>
+<% end %>
