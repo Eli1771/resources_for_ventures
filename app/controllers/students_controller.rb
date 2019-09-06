@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
   def index
-    @students = User.all.select {|u| !u.is_teacher}
+    @students = User.students
   end
 
   def show
