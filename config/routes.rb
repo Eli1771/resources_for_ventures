@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'users#home'
+
   resources :courses
   resources :assignments
   resources :materials
