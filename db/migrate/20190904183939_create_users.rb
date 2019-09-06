@@ -4,7 +4,7 @@ class CreateUsers < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :email
       t.string :password_digest
-      t.integer :course_level
+      t.integer :course_id
       t.boolean :is_teacher
 
       t.timestamps

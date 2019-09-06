@@ -4,7 +4,7 @@ class CreateMaterials < ActiveRecord::Migration[5.2]
       t.string :name
       t.string :description
       t.string :url
-      t.integer :course_level
+      t.integer :course_id
 
       t.timestamps
     end
