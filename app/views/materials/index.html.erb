@@ -1,0 +1,7 @@
+<h1>All Materials</h1>
+
+<ul>
+  <% @materials.each do |material| %>
+    <li><%= link_to "#{material.name} - #{material.course.name}", material_path(material) %>
+  <% end %>
+</ul>
