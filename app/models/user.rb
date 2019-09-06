@@ -6,10 +6,10 @@ class User < ApplicationRecord
   has_secure_password
 
   def correct_user_path
-    if self.is_teacher
-      return "/teachers/#{self.id}"
-    else
-      return "/students/#{self.id}"
-    end
+    self.is_teacher ? "/teachers/#{self.id}" : "/students/#{self.id}"
   end
+
+  def type
+    self.is_teacher ? 'Teacher' : 'Student'
+  end 
 end

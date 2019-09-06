@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+
   def new
   end
 
@@ -6,6 +7,10 @@ class UsersController < ApplicationController
     @user = User.create(user_params)
     session[:user_id] = @user.id
     redirect_to @user.correct_user_path
+  end
+
+  def index
+    @user = User.all
   end
 
   def show
