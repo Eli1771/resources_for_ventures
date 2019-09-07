@@ -18,8 +18,24 @@
  @import "bootstrap";
 
  body {
-   padding-top: 70px;
    padding-bottom: 30px;
+ }
+
+ .navbar-toggle {
+   display: none;
+ }
+
+ .navbar-header {
+   height: 40px;
+   background: #333;
+   color: #eee;
+ }
+
+ .navbar-header a {
+   color: white;
+   text-decoration: none;
+   font-size: 1.5em;
+   padding: 10% 10px 10% 10px;
  }
 
  .theme-dropdown .dropdown-menu {
