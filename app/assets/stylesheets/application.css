@@ -19,6 +19,7 @@
 
  body {
    padding-bottom: 30px;
+   margin: 0px;
  }
 
  .navbar-toggle {
@@ -35,7 +36,11 @@
    color: white;
    text-decoration: none;
    font-size: 1.5em;
-   padding: 10% 10px 10% 10px;
+   padding: 10px 2vw 10px 2vw;
+ }
+
+ .navbar-header a:hover {
+   color: #999;
  }
 
  .theme-dropdown .dropdown-menu {
@@ -50,6 +55,10 @@
 
  .center {
    text-align: center;
+ }
+
+ .main {
+   margin: 20px;
  }
 
  .pic,
