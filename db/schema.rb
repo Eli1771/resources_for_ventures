@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_06_205016) do
+ActiveRecord::Schema.define(version: 2019_09_07_194929) do
 
   create_table "assignments", force: :cascade do |t|
     t.integer "material_id"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2019_09_06_205016) do
     t.boolean "is_teacher"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "uid"
   end
 
 end

@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   root 'users#home'
 
   resources :courses, only: [:show] do
-    resources :materials, only: [:index]
+    resources :materials, only: [:index, :show, :new, :create]
   end
 
   resources :assignments, only: [:index, :show, :new, :create]
@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get '/signin', to: 'sessions#new'
   post '/signin', to: 'sessions#create'
   get '/signout', to: 'sessions#destroy'
+  get '/auth/facebook/callback' => 'sessions#fb_create'
 
   get '/students', to: 'students#index'
   get '/teachers', to: 'teachers#index'
