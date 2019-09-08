@@ -8,7 +8,11 @@ class MaterialsController < ApplicationController
   end
 
   def index
-    @materials = Material.all
+    if params[:course_id]
+      @materials = Course.find(params[:course_id]).materials
+    else
+      @materials = Material.all
+    end
   end
 
   def show

@@ -22,3 +22,9 @@ Confirm:
 - [ ] Limited logic in controllers
 - [ ] Views use helper methods if appropriate
 - [ ] Views use partials if appropriate
+
+MY CHECKLIST
+
+Views for materials by course levels
+Make radio button select w/ icons for student signin
+Helpers in views to set permissions
