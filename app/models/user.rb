@@ -5,6 +5,8 @@ class User < ApplicationRecord
 
   has_secure_password
 
+  before_save :default_values
+
   scope :teachers, -> { where(is_teacher: true) }
   scope :students, -> { where(is_teacher: false) }
 
@@ -19,6 +21,6 @@ class User < ApplicationRecord
   def default_values
     if self.is_teacher.nil?
       self.is_teacher = false
-    end 
+    end
   end
 end
