@@ -7,15 +7,19 @@ module SessionsHelper
     user = User.find(session[:user_id])
   end
 
+  def current_user_teacher?
+    logged_in && current_user.is_teacher ? true : false
+  end
+
   def correct_navbar
     if !logged_in?
       'signed_out_navbar'
     else
-      if current_user.is_teacher
+      if current_user_teacher?
         'teacher_navbar'
       else
         'student_navbar'
       end
-    end 
+    end
   end
 end
