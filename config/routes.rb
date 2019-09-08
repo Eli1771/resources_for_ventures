@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'users#home'
 
-  resources :courses, only: [:show, :index] do
+  resources :courses, only: [:index] do
     resources :materials, only: [:index, :show, :new, :create]
   end
 

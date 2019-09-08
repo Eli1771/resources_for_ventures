@@ -1,9 +1,8 @@
 <h1>All Materials</h1>
+<%= link_to 'View By Course', courses_path %><br>
 
 <ul>
   <% @materials.each do |material| %>
     <li><%= link_to "#{material.name} - #{material.course.name}", material_path(material) %>
   <% end %>
 </ul>
-
-<%= link_to 'View By Course', courses_path %>
