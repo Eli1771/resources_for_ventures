@@ -8,4 +8,6 @@ Send batch Assignments
 
 Create materials in assignment#new form
 
-Create assignments in material#new form 
+Create assignments in material#new form
+
+Login with google profile
