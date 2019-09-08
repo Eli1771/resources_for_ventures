@@ -20,12 +20,12 @@ Specs:
 Confirm:
 - [ ] The application is pretty DRY
 - [ ] Limited logic in controllers
-- [ ] Views use helper methods if appropriate
-- [ ] Views use partials if appropriate
+- [X] Views use helper methods if appropriate
+- [X] Views use partials if appropriate
 
 MY CHECKLIST
 
-Views for materials by course levels
 Make radio button select w/ icons for student signin
 Helpers in views to set permissions
 write out course/:id/materials/:id and course/:id/materials/new
+Flash messages for all routing errors

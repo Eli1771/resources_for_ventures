@@ -8,7 +8,7 @@ module SessionsHelper
   end
 
   def current_user_teacher?
-    logged_in && current_user.is_teacher ? true : false
+    logged_in? && current_user.is_teacher ? true : false
   end
 
   def correct_navbar
