@@ -17,6 +17,12 @@ class AssignmentsController < ApplicationController
     @assignment = Assignment.find(params[:id])
   end
 
+  def patch
+    @assignment = Assignment.find(params[:id])
+    @assignment.viewed = true
+    @assignmnet.save
+  end
+
   private
 
   def assignment_params

@@ -3,7 +3,10 @@
 <p>Your Assignments:</p>
 <ul>
   <%= @assignments.each do |assignment| %>
-    <li><%= link_to assignment.material.name, material_path(assignment.material) %></li>
+    <li>
+      <%= link_to assignment.material.name, material_path(assignment.material) %>
+      - <%= link_to 'Mark As Viewed', "/assignments/#{assignment.id}" %>
+    </li>
   <% end %>
 </ul><br>
 

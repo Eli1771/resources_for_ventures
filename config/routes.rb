@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :materials, only: [:index, :show, :new, :create]
   end
 
-  resources :assignments, only: [:index, :show, :new, :create]
+  resources :assignments, only: [:index, :show, :new, :create, :edit, :update]
   resources :materials, only: [:index, :show]
   resources :users, only: [:index, :show, :new, :create]
 

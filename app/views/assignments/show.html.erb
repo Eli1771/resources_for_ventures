@@ -1,2 +1,3 @@
 <h1>Assignment for <%= @assignment.user.name %></h1>
+<h3><%= @assignment.viewed ? 'Viewed' : 'Not Viewed' %>
 <h3><%= link_to @assignment.material.name, material_path(@assignment.material_id) %>

@@ -30,3 +30,4 @@ Helpers in views to set permissions
 write out course/:id/materials/:id and course/:id/materials/new
 Flash messages for all routing errors
 Bugfix student assignments list
+add option to select user type when you sign up w/ fb
