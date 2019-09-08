@@ -1,18 +1,16 @@
-<h1>Here's a student!</h1>
-<p><%= @student.name %></p>
+<h1><%= @student.name %></h1>
+
+<p>Your Assignments:</p>
+<ul>
+  <%= @assignments.each do |assignment| %>
+    <li><%= link_to assignment.material.name, material_path(assignment.material) %></li>
+  <% end %>
+</ul><br>
+
 
 <p>View your teachers</p><br><br>
 
-<p>View your assignments</p><br><br>
-
-<p>View all course materials</p><br><br>
-
-
-
-
-
-
-
+<p><%= link_to 'View all course materials', course_materials_path(@student.course_id) %></p><br><br>
 
 
 <%= link_to 'Sign Out', signout_path %>

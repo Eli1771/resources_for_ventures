@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_07_194929) do
+ActiveRecord::Schema.define(version: 2019_09_08_175736) do
 
   create_table "assignments", force: :cascade do |t|
     t.integer "material_id"
     t.integer "user_id"
-    t.boolean "mark_as_viewed"
+    t.boolean "viewed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

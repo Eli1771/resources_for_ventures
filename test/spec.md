@@ -29,3 +29,4 @@ Make radio button select w/ icons for student signin
 Helpers in views to set permissions
 write out course/:id/materials/:id and course/:id/materials/new
 Flash messages for all routing errors
+Bugfix student assignments list
