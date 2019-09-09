@@ -22,4 +22,12 @@ module SessionsHelper
       end
     end
   end
+
+  def homepage_path
+    if logged_in?
+      "/users/#{current_user.id}"
+    else
+      root_url
+    end
+  end
 end

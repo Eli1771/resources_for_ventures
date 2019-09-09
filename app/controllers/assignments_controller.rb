@@ -17,8 +17,8 @@ class AssignmentsController < ApplicationController
     @assignment = Assignment.find(params[:id])
   end
 
-  def patch
-    @assignment = Assignment.find(params[:id])
+  def update
+    @assignment = Assignment.find(params[:assignment_id])
     @assignment.viewed = true
     @assignmnet.save
   end
@@ -26,6 +26,6 @@ class AssignmentsController < ApplicationController
   private
 
   def assignment_params
-    params.require(:assignment).permit(:user_id, :material_id, :mark_as_viewed)
+    params.require(:assignment).permit(:assignment_id, :user_id, :material_id, :mark_as_viewed)
   end
 end
