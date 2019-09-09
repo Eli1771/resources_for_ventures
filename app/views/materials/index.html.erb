@@ -3,6 +3,6 @@
 
 <ul>
   <% @materials.each do |material| %>
-    <li><%= link_to "#{material.name} - #{material.course.name}", material_path(material) %>
+    <li><%= link_to "#{material.name} - #{material.course.name}", course_material_path(material.course, material) %>
   <% end %>
 </ul>
