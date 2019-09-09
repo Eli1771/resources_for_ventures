@@ -5,5 +5,6 @@ class TeachersController < ApplicationController
 
   def show
     @teacher = User.find(params[:id])
+    @assignments = Assignment.all.select {|a| a.creator_id == @teacher.id}
   end
 end

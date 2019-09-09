@@ -1,6 +1,16 @@
 <h1>Here's a teacher!</h1>
 <h3><%= @teacher.name %></h3>
 
+<p>Your assignments</p>
+<ul>
+  <% @assignments.each do |assignment| %>
+    <li>
+      <%= link_to assignment.material.name, material_path(assignment.material) %> -
+      <%= link_to assignment.user.name, user_path(assignment.user) %>
+    </li>
+  <% end %>
+</ul>
+
 <p>View your students</p><br><br>
 
 <%= link_to 'Sign Out', signout_path %>
