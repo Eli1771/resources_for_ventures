@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_09_08_175736) do
+ActiveRecord::Schema.define(version: 2019_09_09_050432) do
 
   create_table "assignments", force: :cascade do |t|
     t.integer "material_id"
@@ -18,6 +18,7 @@ ActiveRecord::Schema.define(version: 2019_09_08_175736) do
     t.boolean "viewed"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "creator_id"
   end
 
   create_table "courses", force: :cascade do |t|
