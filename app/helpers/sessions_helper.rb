@@ -25,7 +25,7 @@ module SessionsHelper
 
   def homepage_path
     if logged_in?
-      "/users/#{current_user.id}"
+      current_user.correct_user_path
     else
       root_url
     end
