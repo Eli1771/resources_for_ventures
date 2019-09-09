@@ -18,9 +18,11 @@ class AssignmentsController < ApplicationController
   end
 
   def update
-    @assignment = Assignment.find(params[:assignment_id])
-    @assignment.viewed = true
-    @assignmnet.save
+    #binding.pry
+    assignment = Assignment.find(params[:assignment_id])
+    assignment.viewed = true
+    assignment.save
+    redirect_to assignment_path(assignment)
   end
 
   private

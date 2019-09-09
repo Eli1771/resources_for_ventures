@@ -6,7 +6,7 @@
     <li>
       <%= link_to assignment.material.name, material_path(assignment.material) %> -
       <%= form_for assignment, { url: { controller: 'assignments', action: 'update' } } do |f| %>
-        <%= f.hidden_field :assignment_id %>
+        <input type="hidden" value="<%= assignment.id %>" name="assignment_id" id="id">
         <%= f.submit %>
       <% end %>
     </li>
