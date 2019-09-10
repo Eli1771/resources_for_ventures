@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   validates :name, { presence: true }
   validates :email, { presence: true }
-  validates :password_digest, { presence: true } 
+  validates :password_digest, { presence: true }
 
   has_many :assignments
   has_many :materials, through: :assignments
@@ -25,6 +25,13 @@ class User < ApplicationRecord
   def default_values
     if self.is_teacher.nil?
       self.is_teacher = false
+    end
+  end
+
+  def redirect_if_not_teacher
+    if !self.is_teacher
+      flash[:message] = 'Sorry, students don\'t have permission to view that page'
+      redirect_to self.currect_user_path
     end
   end
 end
