@@ -1,5 +1,6 @@
 class MaterialsController < ApplicationController
   def new
+    @material = Material.new(course_id: params[:course_id])
   end
 
   def create
