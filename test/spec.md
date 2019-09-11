@@ -14,7 +14,7 @@ Specs:
 - [x] Include logout
 - [X] Include third party signup/login (how e.g. Devise/OmniAuth)
 - [x] Include nested resource show or index (URL e.g. users/2/recipes)
-- [ ] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
+- [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
 - [ ] Include form display of validation errors (form URL e.g. /recipes/new)
 
 Confirm:
@@ -26,11 +26,11 @@ Confirm:
 MY CHECKLIST
 
 -Make radio button select w/ icons for student signin
--Helpers in views to set permissions
--write out course/:id/materials/:id and course/:id/materials/new
+-Helpers in views to set permissions <--- done? 
 -Flash messages for all routing errors
 -Bugfix student assignments list
--add option to select user type when you sign up w/ fb
+-Add option to select user type when you sign up w/ fb <----------
 -User assignment 'mark as viewed' buttons should be displayed conditionally
 -Bugfix user assignments hash outputting to screen
 -Students view their teachers and vice versa
+-Teachers should need to enter a passcode for new user

@@ -1,6 +1,11 @@
 <h1>Signup</h1>
 
 <%= form_for :user do |f| %>
+  <%= f.label 'Check this box if you are an instructor' %>
+  <input type="checkbox" name="user[is_teacher]" id="is_teacher"><br><br>
+
+  <%= link_to 'Log in with Facebook!', '/auth/facebook' %><br><br>
+
   <%= f.label :name %>
   <%= f.text_field :name %><br>
   <%= f.label :email %>
@@ -9,10 +14,7 @@
   <%= f.password_field :password %><br>
   <%= f.label :course_id, 'Course' %>
   <%= f.collection_select :course_id, Course.all, :id, :name %><br>
-  <%= f.label 'Check this box if you are an instructor' %>
-  <input type="checkbox" name="user[is_teacher]" id="is_teacher"><br><br>
+
 
   <%= f.submit 'Create User' %>
 <% end %>
-
-<br><%= link_to 'Log in with Facebook!', '/auth/facebook' %>
