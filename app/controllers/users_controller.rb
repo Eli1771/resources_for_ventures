@@ -15,6 +15,7 @@ class UsersController < ApplicationController
     @user = User.find_or_create_by(uid: auth['uid']) do |u|
       u.name = auth['info']['name']
       u.email = auth['info']['email']
+      u.is_teacher = params[:is_teacher]
     end
     session[:user_id] = @user.id
     redirect_to @user.correct_user_path
@@ -32,5 +33,9 @@ class UsersController < ApplicationController
 
   def user_params
     params.require(:user).permit(:name, :email, :password, :course_id, :is_teacher)
+  end
+
+  def auth
+    request.env['omniauth.auth']
   end
 end

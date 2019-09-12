@@ -26,9 +26,8 @@ Confirm:
 MY CHECKLIST
 
 -Make radio button select w/ icons for student signin
--Helpers in views to set permissions <--- done? 
+-Helpers in views to set permissions <--- done?
 -Flash messages for all routing errors
--Bugfix student assignments list
 -Add option to select user type when you sign up w/ fb <----------
 -User assignment 'mark as viewed' buttons should be displayed conditionally
 -Bugfix user assignments hash outputting to screen
