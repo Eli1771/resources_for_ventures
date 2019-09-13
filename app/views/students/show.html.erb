@@ -4,11 +4,13 @@
 <ul>
   <%= @assignments.each do |assignment| %>
     <li>
-      <%= link_to assignment.material.name, material_path(assignment.material) %> -
-      <%= form_for assignment, { url: { controller: 'assignments', action: 'update' } } do |f| %>
-        <input type="hidden" value="<%= assignment.id %>" name="assignment_id" id="id">
-        <%= f.submit %>
-      <% end %>
+      <%= link_to assignment.material.name, material_path(assignment.material) %>
+      <div class="assignment-viewed-button" style="display: <%= display_viewed_or_not(assignment) %>">
+        <%= form_for assignment, { url: { controller: 'assignments', action: 'update' } } do |f| %>
+          <input type="hidden" value="<%= assignment.id %>" name="assignment_id" id="id">
+          <%= f.submit 'Mark as viewed' %>
+        <% end %>
+      </div>
     </li>
   <% end %>
 </ul><br>

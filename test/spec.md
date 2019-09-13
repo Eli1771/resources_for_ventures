@@ -29,7 +29,6 @@ MY CHECKLIST
 -Helpers in views to set permissions <--- done?
 -Flash messages for all routing errors
 -Add option to select user type when you sign up w/ fb <----------
--User assignment 'mark as viewed' buttons should be displayed conditionally
 -Bugfix user assignments hash outputting to screen
 -Students view their teachers and vice versa
 -Teachers should need to enter a passcode for new user
