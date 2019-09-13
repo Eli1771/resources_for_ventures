@@ -17,7 +17,7 @@ class TeachersController < ApplicationController
 
   def redirect_if_not_teacher(user)
     if user.is_teacher == false
-      flash[:message] = 'Sorry, students don\'t have permission to view that page'
+      flash[:failure] = 'Sorry, students don\'t have permission to view that page'
       redirect_to user.correct_user_path
     end
   end

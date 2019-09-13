@@ -75,3 +75,19 @@
    height: 290px;
    text-align: left;
  }
+
+ .flash {
+   width: max-content;
+   padding: .5em;
+   border-radius: 10px;
+ }
+
+ .success {
+   background: #c8f1c9;
+   color: green;
+ }
+
+ .failure {
+   background: #fdd7d7;
+   color: red;
+ }

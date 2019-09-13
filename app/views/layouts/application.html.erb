@@ -33,7 +33,9 @@
     <!-- content -->
     <div class="container main"  role="main">
 
-      <h3><%= flash[:message] %></h3>
+      <% flash.each do |key, value| %>
+        <h3 class="flash <%= key %>"><%= value %></h3>
+      <% end %>
 
       <%= yield %>
 
