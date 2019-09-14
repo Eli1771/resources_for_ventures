@@ -1,5 +1,6 @@
 class MaterialsController < ApplicationController
   def new
+    redirect_if_not_teacher(User.find(session[:user_id]))
     @material = Material.new(course_id: params[:course_id])
   end
 
@@ -28,5 +29,12 @@ class MaterialsController < ApplicationController
 
   def materials_params
     params.require(:material).permit(:name, :description, :url, :course_id)
+  end
+
+  def redirect_if_not_teacher(user)
+    if user.is_teacher == false
+      flash[:failure] = 'Sorry, students don\'t have permission to view that page'
+      redirect_to user.correct_user_path
+    end
   end
 end
