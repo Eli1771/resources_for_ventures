@@ -18,8 +18,8 @@ Specs:
 - [x] Include form display of validation errors (form URL e.g. /recipes/new)
 
 Confirm:
-- [ ] The application is pretty DRY
-- [ ] Limited logic in controllers
+- [x] The application is pretty DRY
+- [x] Limited logic in controllers
 - [x] Views use helper methods if appropriate
 - [x] Views use partials if appropriate
 
@@ -40,3 +40,8 @@ Requirements
 -Can log in as a teacher
 -can log in as a student with Facebook
 -Can log in as a teacher with facebook
+-Only teachers can create materials
+-Only teachers can create materials within a course level
+-Only teachers can create assignments
+-Teachers see a list of all students in their course level
+-All show pages are exclusive to current user
