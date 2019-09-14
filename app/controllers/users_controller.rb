@@ -8,9 +8,9 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-
     if @user.save
       session[:user_id] = @user.id
+      flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"
       redirect_to @user.correct_user_path
     else
       render :new
@@ -24,6 +24,7 @@ class UsersController < ApplicationController
       u.is_teacher = params[:is_teacher]
     end
     session[:user_id] = @user.id
+    flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"
     redirect_to @user.correct_user_path
   end
 

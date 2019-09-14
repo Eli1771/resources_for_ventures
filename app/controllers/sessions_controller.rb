@@ -6,8 +6,10 @@ class SessionsController < ApplicationController
     @user = User.find_by(email: session_params[:email])
     if @user && @user.authenticate(session_params[:password])
       session[:user_id] = @user.id
+      flash[:success] = 'Successfully logged in'
       redirect_to @user.correct_user_path
     else
+      flash[:failure] = 'Incorrect log in info. Please try again.'
       redirect_to signin_path
     end
   end
