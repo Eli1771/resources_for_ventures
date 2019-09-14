@@ -38,8 +38,5 @@ Requirements
 
 -can log in as a student with Facebook
 -Can log in as a teacher with facebook
--Only teachers can create materials
--Only teachers can create materials within a course level
--Only teachers can create assignments
 -Teachers see a list of all students in their course level
 -All show pages are exclusive to current user

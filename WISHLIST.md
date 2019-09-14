@@ -11,3 +11,5 @@ Create materials in assignment#new form
 Create assignments in material#new form
 
 Login with google profile
+
+Teachers can create materials within a course level

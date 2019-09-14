@@ -2,4 +2,4 @@
 <h3><%= @assignment.viewed ? 'Viewed' : 'Not Viewed' %></h3>
 <h3><%= link_to @assignment.material.name, material_path(@assignment.material_id) %></h3>
 
-<%= link_to 'Back to your user page', "/students/#{@assignment.user_id}" %>
+<%= link_to 'Back to your user page', "/teachers/#{@assignment.creator_id}" %>

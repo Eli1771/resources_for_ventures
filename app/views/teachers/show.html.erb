@@ -5,8 +5,9 @@
 <ul>
   <% @assignments.each do |assignment| %>
     <li>
+      <%= link_to assignment.user.name, user_path(assignment.user) %> -
       <%= link_to assignment.material.name, material_path(assignment.material) %> -
-      <%= link_to assignment.user.name, user_path(assignment.user) %>
+      <%= viewed_or_not(assignment) %>
     </li>
   <% end %>
 </ul>
