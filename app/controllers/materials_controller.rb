@@ -4,8 +4,12 @@ class MaterialsController < ApplicationController
   end
 
   def create
-    @material = Material.create(materials_params)
-    redirect_to material_path(@material)
+    @material = Material.new(materials_params)
+    if @material.save
+      redirect_to material_path(@material)
+    else
+      render :new
+    end
   end
 
   def index
