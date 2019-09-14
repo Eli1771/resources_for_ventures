@@ -28,6 +28,6 @@ class AssignmentsController < ApplicationController
   private
 
   def assignment_params
-    params.require(:assignment).permit(:assignment_id, :user_id, :material_id, :mark_as_viewed)
+    params.require(:assignment).permit(:assignment_id, :user_id, :material_id, :creator_id, :mark_as_viewed)
   end
 end

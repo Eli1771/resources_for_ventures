@@ -32,3 +32,4 @@ MY CHECKLIST
 -Bugfix user assignments hash outputting to screen
 -Students view their teachers and vice versa
 -Teachers should need to enter a passcode for new user
+-Include option to hide/show completed assignments

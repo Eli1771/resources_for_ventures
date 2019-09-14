@@ -27,11 +27,4 @@ class User < ApplicationRecord
       self.is_teacher = false
     end
   end
-
-  def redirect_if_not_teacher
-    if !self.is_teacher
-      flash[:message] = 'Sorry, students don\'t have permission to view that page'
-      redirect_to self.currect_user_path
-    end
-  end
 end
