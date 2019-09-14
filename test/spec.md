@@ -15,7 +15,7 @@ Specs:
 - [X] Include third party signup/login (how e.g. Devise/OmniAuth)
 - [x] Include nested resource show or index (URL e.g. users/2/recipes)
 - [x] Include nested resource "new" form (URL e.g. recipes/1/ingredients/new)
-- [ ] Include form display of validation errors (form URL e.g. /recipes/new)
+- [x] Include form display of validation errors (form URL e.g. /recipes/new)
 
 Confirm:
 - [ ] The application is pretty DRY
@@ -33,3 +33,10 @@ MY CHECKLIST
 -Students view their teachers and vice versa
 -Teachers should need to enter a passcode for new user
 -Include option to hide/show completed assignments
+
+Requirements
+
+-Can log in as a students
+-Can log in as a teacher
+-can log in as a student with Facebook
+-Can log in as a teacher with facebook
