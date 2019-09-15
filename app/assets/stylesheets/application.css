@@ -95,3 +95,14 @@
  input[type=radio] {
    display: none
  }
+
+ img {
+   height: 15em;
+   width: 15em;
+   border: 10px solid #eee;
+   border-radius: 100%;
+ }
+
+ img + imput:selected {
+   border: 10px solid blue;
+ }

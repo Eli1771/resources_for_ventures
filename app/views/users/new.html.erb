@@ -27,8 +27,11 @@
   <%= f.text_field :email %><br>
   <%= f.label :password %>
   <%= f.password_field :password %><br>
-  <%= f.label :course_id, 'Course' %>
-  <%= f.collection_radio_buttons :course_id, Course.all, :id, :name %><br>
+  <%= f.label :course_id, 'Course' %><br>
+  <% Course.all.each do |course| %>
+    <label for="course_id_<%= course.id %>"name="course_id"><%= image_tag "logo-#{course.fileify}.jpg" %></label>
+    <%= radio_button_tag :course_id, course.id %>
+  <% end %></br>
 
 
   <%= f.submit 'Create User' %>
