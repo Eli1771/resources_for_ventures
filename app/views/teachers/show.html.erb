@@ -1,16 +1,19 @@
-<h1>Here's a teacher!</h1>
+<h1>Teacher Homepage</h1>
 <h3><%= @teacher.name %></h3>
+<h3><%= @teacher.course.name %></h3>
 
-<p>Your assignments</p>
-<ul>
-  <% @assignments.each do |assignment| %>
-    <li>
-      <%= link_to assignment.user.name, user_path(assignment.user) %> -
-      <%= link_to assignment.material.name, material_path(assignment.material) %> -
-      <%= viewed_or_not(assignment) %>
-    </li>
-  <% end %>
-</ul>
+<% if viewing_current_user?(@teacher) %>
+  <p>Your assignments</p>
+  <ul>
+    <% @assignments.each do |assignment| %>
+      <li>
+        <%= link_to assignment.user.name, user_path(assignment.user) %> -
+        <%= link_to assignment.material.name, material_path(assignment.material) %> -
+        <%= viewed_or_not(assignment) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
 
 <p>View your students</p><br><br>
 
