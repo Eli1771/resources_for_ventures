@@ -5,6 +5,7 @@ class TeachersController < ApplicationController
 
   def show
     @teacher = User.find(params[:id])
+    @students = User.students.select {|s| s.course_id == @teacher.course_id}
     @assignments = Assignment.all.select {|a| a.creator_id == @teacher.id}
     redirect_if_not_teacher(current_user)
   end

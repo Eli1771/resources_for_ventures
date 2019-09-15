@@ -15,6 +15,12 @@
   </ul>
 <% end %>
 
-<p>View your students</p><br><br>
+<p>View your students</p>
+<ul>
+  <% @students.each do |student| %>
+    <li><%= link_to student.name, student.correct_user_path %>
+  <% end %>
+</ul>
+
 
 <%= link_to 'Sign Out', signout_path %>

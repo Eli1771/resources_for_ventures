@@ -103,6 +103,10 @@
    border-radius: 100%;
  }
 
+ img:hover {
+   border: 10px solid #9ebad2;
+ }
+
  input[type=radio]:checked + label img {
-   border: 10px solid blue;
+   border: 10px solid #569dda;
  }

@@ -25,7 +25,6 @@ Confirm:
 
 MY CHECKLIST
 
--Make radio button select w/ icons for student signin *
 -Add option to select user type when you sign up w/ fb <-------- *
 -Bugfix user assignments hash outputting to screen *
 -Students view their teachers and vice versa
@@ -38,4 +37,3 @@ Requirements
 -can log in as a student with Facebook
 -Can log in as a teacher with facebook
 -Teachers see a list of all students in their course level
--All show pages are exclusive to current user
