@@ -91,3 +91,7 @@
    background: #fdd7d7;
    color: red;
  }
+
+ input[type=radio] {
+   display: none
+ }

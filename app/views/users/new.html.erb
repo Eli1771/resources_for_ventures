@@ -28,7 +28,7 @@
   <%= f.label :password %>
   <%= f.password_field :password %><br>
   <%= f.label :course_id, 'Course' %>
-  <%= f.collection_select :course_id, Course.all, :id, :name %><br>
+  <%= f.collection_radio_buttons :course_id, Course.all, :id, :name %><br>
 
 
   <%= f.submit 'Create User' %>
