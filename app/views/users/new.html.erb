@@ -29,8 +29,8 @@
   <%= f.password_field :password %><br>
   <%= f.label :course_id, 'Course' %><br>
   <% Course.all.each do |course| %>
-    <label for="course_id_<%= course.id %>"name="course_id"><%= image_tag "logo-#{course.fileify}.jpg" %></label>
     <%= radio_button_tag :course_id, course.id %>
+    <label for="course_id_<%= course.id %>"name="course_id"><%= image_tag "logo-#{course.fileify}.jpg" %></label>
   <% end %></br>
 
 

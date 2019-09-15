@@ -103,6 +103,6 @@
    border-radius: 100%;
  }
 
- img + imput:selected {
+ input[type=radio]:checked + label img {
    border: 10px solid blue;
  }
