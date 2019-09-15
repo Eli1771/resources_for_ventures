@@ -15,6 +15,8 @@ class TeachersController < ApplicationController
     User.find(session[:user_id])
   end
 
+
+  #dry this out
   def redirect_if_not_teacher(user)
     if user.is_teacher == false
       flash[:failure] = 'Sorry, students don\'t have permission to view that page'

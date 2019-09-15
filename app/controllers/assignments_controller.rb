@@ -15,6 +15,7 @@ class AssignmentsController < ApplicationController
   end
 
   def show
+    @user = User.find(session[:user_id])
     @assignment = Assignment.find(params[:id])
   end
 
@@ -32,6 +33,7 @@ class AssignmentsController < ApplicationController
     params.require(:assignment).permit(:assignment_id, :user_id, :material_id, :creator_id, :mark_as_viewed)
   end
 
+  #dry this out
   def redirect_if_not_teacher(user)
     if user.is_teacher == false
       flash[:failure] = 'Sorry, students don\'t have permission to view that page'
