@@ -4,7 +4,7 @@ class StudentsController < ApplicationController
   end
 
   def show
-    @student = User.find(params[:id])
+    @student = User.find(session[:user_id])
     @assignments = @student.assignments
   end
 end

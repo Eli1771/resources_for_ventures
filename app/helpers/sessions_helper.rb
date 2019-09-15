@@ -30,4 +30,8 @@ module SessionsHelper
       root_url
     end
   end
+
+  def viewing_current_user?(user)
+    current_user.id == user.id ? true : false
+  end
 end
