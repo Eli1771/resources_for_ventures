@@ -17,7 +17,12 @@
 </ul><br>
 
 
-<p>View your teachers</p><br><br>
+<p>View your teachers</p>
+<ul>
+  <% @teachers.each do |teacher| %>
+    <li><%= link_to teacher.name, teacher.correct_user_path %></li>
+  <% end %>
+</ul>
 
 <p><%= link_to 'View all course materials', course_materials_path(@student.course_id) %></p><br><br>
 

@@ -5,6 +5,7 @@ class StudentsController < ApplicationController
 
   def show
     @student = User.find(params[:id])
+    @teachers = User.teachers.select {|t| t.course_id == @student.course_id}
     @assignments = @student.assignments
   end
 end
