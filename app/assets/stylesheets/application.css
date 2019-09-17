@@ -20,6 +20,20 @@
  body {
    padding-bottom: 30px;
    margin: 0px;
+   font-family: sans-serif;
+ }
+
+ a {
+   color: black;
+   text-decoration: none;
+ }
+
+ a:link {
+
+ }
+
+ a:hover {
+   color: #555;
  }
 
  .navbar-toggle {
@@ -27,16 +41,21 @@
  }
 
  .navbar-header {
-   height: 40px;
+   height: 50px;
    background: #333;
    color: #eee;
  }
 
  .navbar-header a {
+   display: inline-block;
    color: white;
    text-decoration: none;
    font-size: 1.5em;
    padding: 10px 2vw 10px 2vw;
+ }
+
+ .navbar-brand {
+   top: 20px;
  }
 
  .navbar-header a:hover {

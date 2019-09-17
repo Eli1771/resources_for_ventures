@@ -22,6 +22,7 @@ class UsersController < ApplicationController
       u.name = auth['info']['name']
       u.email = auth['info']['email']
       u.is_teacher = params[:is_teacher]
+      u.course_id = params[:course_id]
     end
     session[:user_id] = @user.id
     flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"

@@ -29,6 +29,7 @@ MY CHECKLIST
 -Teachers should need to enter a passcode for new user
 -Include option to hide/show completed assignments
 -Set basic layouts for mobile
+-Use partials to format view pages with course-level themes
 
 Requirements
 
