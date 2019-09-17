@@ -2,25 +2,31 @@
 <h3><%= @teacher.name %></h3>
 <h3><%= @teacher.course.name %></h3>
 
-<% if viewing_current_user?(@teacher) %>
-  <p>Your assignments</p>
-  <ul>
-    <% @assignments.each do |assignment| %>
-      <li>
-        <%= link_to assignment.user.name, user_path(assignment.user) %> -
-        <%= link_to assignment.material.name, material_path(assignment.material) %> -
-        <%= viewed_or_not(assignment) %>
-      </li>
+<div class="interactive">
+  <div class="data-container">
+    <% if viewing_current_user?(@teacher) %>
+      <p>Your assignments</p>
+      <ul>
+        <% @assignments.each do |assignment| %>
+          <li>
+            <%= link_to assignment.user.name, user_path(assignment.user) %> -
+            <%= link_to assignment.material.name, material_path(assignment.material) %> -
+            <%= viewed_or_not(assignment) %>
+          </li>
+        <% end %>
+      </ul>
     <% end %>
-  </ul>
-<% end %>
+  </div>
 
-<p>View your students</p>
-<ul>
-  <% @students.each do |student| %>
-    <li><%= link_to student.name, student.correct_user_path %>
-  <% end %>
-</ul>
+  <div class="data-container">
+    <p>Your students</p>
+    <ul>
+      <% @students.each do |student| %>
+        <li><%= link_to student.name, student.correct_user_path %>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
 
 <%= link_to 'Sign Out', signout_path %>

@@ -30,6 +30,7 @@ MY CHECKLIST
 -Include option to hide/show completed assignments
 -Set basic layouts for mobile
 -Use partials to format view pages with course-level themes
+-Teachers shouldn't be able to mark students' assignments as viewed
 
 Requirements
 

@@ -80,6 +80,15 @@
    margin: 20px;
  }
 
+ .interactive {
+   display: flex;
+ }
+
+ .data-container {
+   width: 45%;
+   margin: 1vw;
+ }
+
  .pic,
  .info {
    padding: 20px;

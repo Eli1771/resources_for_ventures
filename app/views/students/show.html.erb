@@ -1,28 +1,33 @@
 <h1><%= @student.name %></h1>
 <h3>Course: <%= @student.course.name %></h3>
 
-<p>Your Assignments:</p>
-<ul>
-  <% @assignments.each do |assignment| %>
-    <li>
-      <%= link_to assignment.material.name, material_path(assignment.material) %>
-      <div class="assignment-viewed-button" style="display: <%= display_viewed_or_not(assignment) %>">
-        <%= form_for assignment, { url: { controller: 'assignments', action: 'update' } } do |f| %>
-          <input type="hidden" value="<%= assignment.id %>" name="assignment_id" id="id">
-          <%= f.submit 'Mark as viewed' %>
-        <% end %>
-      </div>
-    </li>
-  <% end %>
-</ul><br>
+<div class="interactive">
+  <div class="data-container">
+    <p>Your Assignments:</p>
+    <ul>
+      <% @assignments.each do |assignment| %>
+        <li>
+          <%= link_to assignment.material.name, material_path(assignment.material) %>
+          <div class="assignment-viewed-button" style="display: <%= display_viewed_or_not(assignment) %>">
+            <%= form_for assignment, { url: { controller: 'assignments', action: 'update' } } do |f| %>
+              <input type="hidden" value="<%= assignment.id %>" name="assignment_id" id="id">
+              <%= f.submit 'Mark as viewed' %>
+            <% end %>
+          </div>
+        </li>
+      <% end %>
+    </ul><br>
+  </div>
 
-
-<p>View your teachers</p>
-<ul>
-  <% @teachers.each do |teacher| %>
-    <li><%= link_to teacher.name, teacher.correct_user_path %></li>
-  <% end %>
-</ul>
+  <div class="data-container">
+    <p>Your teachers</p>
+    <ul>
+      <% @teachers.each do |teacher| %>
+        <li><%= link_to teacher.name, teacher.correct_user_path %></li>
+      <% end %>
+    </ul>
+  </div>
+</div>
 
 <p><%= link_to 'View all course materials', course_materials_path(@student.course_id) %></p><br><br>
 
