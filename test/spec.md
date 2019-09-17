@@ -26,8 +26,6 @@ Confirm:
 MY CHECKLIST
 
 -Add option to select user type when you sign up w/ fb <-------- *
--Bugfix user assignments hash outputting to screen *
--Students view their teachers and vice versa
 -Teachers should need to enter a passcode for new user
 -Include option to hide/show completed assignments
 -Set basic layouts for mobile
@@ -36,4 +34,3 @@ Requirements
 
 -can log in as a student with Facebook
 -Can log in as a teacher with facebook
--Teachers see a list of all students in their course level

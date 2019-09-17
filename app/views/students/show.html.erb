@@ -3,7 +3,7 @@
 
 <p>Your Assignments:</p>
 <ul>
-  <%= @assignments.each do |assignment| %>
+  <% @assignments.each do |assignment| %>
     <li>
       <%= link_to assignment.material.name, material_path(assignment.material) %>
       <div class="assignment-viewed-button" style="display: <%= display_viewed_or_not(assignment) %>">
