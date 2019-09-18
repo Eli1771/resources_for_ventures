@@ -41,7 +41,7 @@
  }
 
  .navbar-header {
-   height: 50px;
+   height: 81px;
    background: #333;
    color: #eee;
  }
@@ -50,16 +50,29 @@
    display: inline-block;
    color: white;
    text-decoration: none;
-   font-size: 1.5em;
+   font-size: 1.7em;
    padding: 10px 2vw 10px 2vw;
  }
 
  .navbar-brand {
-   top: 20px;
+   position: relative;
+   top: -18vw;
  }
 
  .navbar-header a:hover {
    color: #999;
+ }
+
+ .course-icon-container {
+   display: inline-block;
+   position: relative;
+   width: 20vw;
+   height: 20vw;
+   background: white;
+   border-radius: 100%;
+   border: 10px solid #333;
+   top: -7vw;
+   left: -4vw;
  }
 
  .theme-dropdown .dropdown-menu {
