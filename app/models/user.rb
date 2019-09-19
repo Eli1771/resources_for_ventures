@@ -1,8 +1,8 @@
 class User < ApplicationRecord
-  validates :name, { presence: true }
-  validates :email, { presence: true }
-  validates :password_digest, { presence: true }
-  validates :course_id, {presence: true}
+  # validates :name, { presence: true }
+  # validates :email, { presence: true }
+  # validates :password_digest, { presence: true }
+  # validates :course_id, {presence: true}
 
   has_many :assignments
   has_many :materials, through: :assignments

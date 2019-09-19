@@ -16,7 +16,7 @@
   <% end %></br>
 
   <label for="facebook">Use Facebook To Signup</label>
-  <input type="checkbox" name="facebook" id="facebook">
+  <input type="checkbox" name="facebook" id="facebook"><br>
 
   <%= f.label :name %>
   <%= f.text_field :name %><br>
@@ -24,7 +24,6 @@
   <%= f.text_field :email %><br>
   <%= f.label :password %>
   <%= f.password_field :password %><br>
-  <%= f.label :course_id, 'Course' %><br>
 
   <%= f.submit 'Create User' %>
 <% end %>
