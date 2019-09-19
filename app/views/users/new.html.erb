@@ -15,7 +15,8 @@
     <label for="user_course_id_<%= course.id %>"name="course_id"><%= image_tag "logo-#{course.fileify}.jpg" %></label>
   <% end %></br>
 
-  <%= link_to 'Log in with Facebook!', '/auth/facebook' %><br><br>
+  <label for="facebook">Use Facebook To Signup</label>
+  <input type="checkbox" name="facebook" id="facebook">
 
   <%= f.label :name %>
   <%= f.text_field :name %><br>
