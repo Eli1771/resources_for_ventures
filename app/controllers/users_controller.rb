@@ -18,7 +18,6 @@ class UsersController < ApplicationController
   end
 
   def fb_create
-    binding.pry
     @user = User.find_or_create_by(uid: auth['uid']) do |u|
       u.name = auth['info']['name']
       u.email = auth['info']['email']
@@ -26,9 +25,13 @@ class UsersController < ApplicationController
       # u.is_teacher = params[:is_teacher]
       # u.course_id = params[:course_id]
     end
-    session[:user_id] = @user.id
-    flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"
-    redirect_to @user.correct_user_path
+    if @user.save
+      session[:user_id] = @user.id
+      flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"
+      redirect_to @user.correct_user_path
+    else
+      render :new
+    end
   end
 
   def index
