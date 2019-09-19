@@ -1,4 +1,4 @@
-<h1>Signup</h1>
+<h1 class="icon-header">Welcome, New User!</h1>
 
 <% if @user.errors.any? %>
   <% @user.errors.full_messages.each do |msg| %>
@@ -10,6 +10,11 @@
   <%= f.label 'Check this box if you are an instructor' %>
   <input type="checkbox" name="user[is_teacher]" id="is_teacher"><br><br>
 
+  <% Course.all.each do |course| %>
+    <%= radio_button_tag 'user[course_id]', course.id %>
+    <label for="user_course_id_<%= course.id %>"name="course_id"><%= image_tag "logo-#{course.fileify}.jpg" %></label>
+  <% end %></br>
+
   <%= link_to 'Log in with Facebook!', '/auth/facebook' %><br><br>
 
   <%= f.label :name %>
@@ -19,11 +24,6 @@
   <%= f.label :password %>
   <%= f.password_field :password %><br>
   <%= f.label :course_id, 'Course' %><br>
-  <% Course.all.each do |course| %>
-    <%= radio_button_tag 'user[course_id]', course.id %>
-    <label for="user_course_id_<%= course.id %>"name="course_id"><%= image_tag "logo-#{course.fileify}.jpg" %></label>
-  <% end %></br>
-
 
   <%= f.submit 'Create User' %>
 <% end %>

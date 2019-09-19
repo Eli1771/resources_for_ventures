@@ -70,9 +70,16 @@
    height: 20vw;
    background: white;
    border-radius: 100%;
-   border: 10px solid #333;
+   border: 5px solid #333;
    top: -7vw;
    left: -4vw;
+ }
+
+ .icon-header {
+   position: relative;
+   top: -5vw;
+   font-size: 3em;
+   color: #808080;
  }
 
  .theme-dropdown .dropdown-menu {
@@ -90,7 +97,9 @@
  }
 
  .main {
+   position: relative;
    margin: 20px;
+   top: 4vw;
  }
 
  .interactive {
@@ -149,5 +158,5 @@
  }
 
  input[type=radio]:checked + label img {
-   border: 10px solid #569dda;
+   border: 10px solid #006ecc;
  }
