@@ -9,6 +9,8 @@
 <%= form_for :user do |f| %>
   <%= link_to 'Log in with Facebook!', '/auth/facebook' %><br><br>
 
+  <h4>Or Sign Up Manually</h4>
+
   <%= f.label 'Check this box if you are an instructor' %>
   <input type="checkbox" name="user[is_teacher]" id="is_teacher"><br><br>
 
@@ -23,7 +25,6 @@
   <%= f.text_field :email %><br>
   <%= f.label :password %>
   <%= f.password_field :password %><br>
-  <%= f.label :course_id, 'Course' %><br>
 
   <%= f.submit 'Create User' %>
 <% end %>
