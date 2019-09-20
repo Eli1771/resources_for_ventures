@@ -21,14 +21,12 @@ class UsersController < ApplicationController
   end
 
   def fb_create
-    binding.pry
-
     if auth
       @user = User.find_or_create_by_omniauth(auth)
       if @user.save
         session[:user_id] = @user.id
         flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"
-        redirect_to @user.correct_user_path
+        redirect_to edit_user_path(@user)
       else
         render :new
       end

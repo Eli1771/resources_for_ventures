@@ -7,7 +7,7 @@ Rails.application.routes.draw do
 
   resources :assignments, only: [:index, :show, :new, :create, :edit, :update]
   resources :materials, only: [:index, :show, :new, :create]
-  resources :users, only: [:index, :show, :new, :create]
+  resources :users, only: [:index, :show, :new, :create, :edit, :update]
 
   get '/signup', to: 'users#new'
   post '/users/new', to: 'users#create'
