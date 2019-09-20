@@ -7,7 +7,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    binding.pry
+
     @user = User.new(user_params)
     if !!params[:facebook]
       redirect_to '/auth/facebook/callback'
@@ -24,20 +24,13 @@ class UsersController < ApplicationController
     binding.pry
 
     if auth
-      user = User.find_or_create_by_omniauth(auth)
-      session[:user_id] = user.id
+      @user = User.find_or_create_by_omniauth(auth)
+      session[:user_id] = @user.id
       flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"
-      redirect_to user.correct_user_path
+      redirect_to @user.correct_user_path
     else
       render :new
     end
-
-
-
-    # @user = User.find_or_create_by(uid: auth['uid']) do |u|
-    #   u.name = auth['info']['name']
-    #   u.email = auth['info']['email']
-    # end
   end
 
   def index

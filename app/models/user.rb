@@ -16,7 +16,8 @@ class User < ApplicationRecord
   scope :students, -> { where(is_teacher: false) }
 
   def self.find_or_create_by_omniauth(fb_auto_hash)
-    where(email: fb_auto_hash['info']['email']).first_or_create do |user|
+    where(uid: fb_auto_hash['uid']).first_or_create do |user|
+      user.email = fb_auto_hash['info']['email']
       user.name = fb_auto_hash['info']['name']
       user.password = SecureRandom.hex
     end
