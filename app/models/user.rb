@@ -15,6 +15,13 @@ class User < ApplicationRecord
   scope :teachers, -> { where(is_teacher: true) }
   scope :students, -> { where(is_teacher: false) }
 
+  def self.find_or_create_by_omniauth(fb_auto_hash)
+    where(email: fb_auto_hash['info']['email']).first_or_create do |user|
+      user.name = fb_auto_hash['info']['name']
+      user.password = SecureRandom.hex
+    end
+  end
+
   def correct_user_path
     self.is_teacher ? "/teachers/#{self.id}" : "/students/#{self.id}"
   end

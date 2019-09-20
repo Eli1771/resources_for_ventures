@@ -22,18 +22,14 @@ class UsersController < ApplicationController
 
   def fb_create
     binding.pry
-    @user = User.all.last
     @user = User.find_or_create_by(uid: auth['uid']) do |u|
       u.name = auth['info']['name']
       u.email = auth['info']['email']
-      # u.password_digest = auth['info']['password']
-      # u.is_teacher = params[:is_teacher]
-      # u.course_id = params[:course_id]
     end
     if @user.save
       session[:user_id] = @user.id
       flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"
-      redirect_to @user.correct_user_path
+      redirect_to edit_user_path(@user)
     else
       render :new
     end
