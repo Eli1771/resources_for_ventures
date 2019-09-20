@@ -48,10 +48,18 @@ class UsersController < ApplicationController
   def edit
     @user = User.find(params[:id])
     current_user = User.find(session[:user_id])
-    if !@user.is_current_user?(current_user)
+    if @user != current_user
       flash[:failure] = 'You can\'t edit another user\'s profile!'
       redirect_to current_user.correct_user_path
     end
+  end
+
+  def update
+    @user = User.find(params[:id])
+    @user.update(user_params)
+    @user.save
+    flash[:success] = 'You have successfully updated your profile!'
+    redirect_to @user.correct_user_path
   end
 
   private

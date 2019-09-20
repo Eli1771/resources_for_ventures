@@ -37,8 +37,4 @@ class User < ApplicationRecord
       self.is_teacher = false
     end
   end
-
-  def is_current_user?(current_user_id)
-    self.id == current_user_id ? true : false
-  end
 end
