@@ -8,11 +8,11 @@
 
 <%= form_for @material, {url: '/materials'} do |f| %>
   <%= f.label :name %>
-  <%= f.text_field :name %><br>
+  <%= f.text_field :name, placeholder: 'My Resources' %><br>
   <%= f.label 'Description (optional)' %>
-  <%= f.text_field :description %><br>
+  <%= f.text_field :description, placeholder: 'Describe your study resource' %><br>
   <%= f.label :url %>
-  <%= f.text_field :url %><br>
+  <%= f.text_field :url, 'translate.google.com' %><br>
   <%= course_id_field(@material) %><br>
 
   <%= f.submit %>

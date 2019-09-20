@@ -20,11 +20,11 @@
   <% end %></br>
 
   <%= f.label :name %>
-  <%= f.text_field :name %><br>
+  <%= f.text_field :name, placeholder: 'Jane Doe' %><br>
   <%= f.label :email %>
-  <%= f.text_field :email %><br>
+  <%= f.text_field :email, placeholder: 'jane@fake.com' %><br>
   <%= f.label :password %>
-  <%= f.password_field :password %><br>
+  <%= f.password_field :password, placeholder: 'password' %><br><br>
 
   <%= f.submit 'Create User' %>
 <% end %>
