@@ -3,21 +3,22 @@
 <%= form_for :user do |f| %>
 
   <div id="change-to-teacher">
-    <input type="checkbox" name="user[is_teacher]" id="is_teacher"><br><br>
-    <%= f.label 'I\'m a teacher!' %>
+    <input type="checkbox" name="user[is_teacher]" id="is_teacher" <%= 'checked' if @user.is_teacher %>>
+    <label for="is_teacher">I'm a teacher!</label>
   </div>
 
   <% Course.all.each do |course| %>
     <%= radio_button_tag 'user[course_id]', course.id %>
+    <input type="radio" name="user[course_id]" id="user_course_id_<%= course.id %>" <%= 'checked' if @user.course_id == course.id %>>
     <label for="user_course_id_<%= course.id %>"name="course_id"><%= image_tag "logo-#{course.fileify}.jpg" %></label>
   <% end %></br>
 
   <%= f.label :name %>
-  <%= f.text_field :name, placeholder: 'Jane Doe' %><br>
+  <%= f.text_field :name, value: "#{@user.name}" %><br>
   <%= f.label :email %>
-  <%= f.text_field :email, placeholder: 'jane@fake.com' %><br>
+  <%= f.text_field :email, value: "#{@user.email}" %><br>
   <%= f.label :password %>
-  <%= f.password_field :password, placeholder: 'password' %><br><br>
+  <%= f.password_field :password %><br><br>
 
-  <%= f.submit 'Create User' %>
+  <%= f.submit 'Edit User' %>
 <% end %>
