@@ -142,6 +142,21 @@
    color: red;
  }
 
+ #change-to-teacher {
+   position: fixed;
+   bottom: 2vh;
+   right: 2vh;
+ }
+
+ #change-to-teacher input[type=checkbox] {
+   display: none;
+ }
+
+ #change-to-teacher input[type=checkbox]:checked + label {
+   padding: .5em;
+   border: 2px solid #006ecc;
+ }
+
  input[type=radio] {
    display: none
  }

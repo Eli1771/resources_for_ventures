@@ -1,2 +1,23 @@
-<h1>Finish your profile or edit your user page</h1>
-<h3><%= @user.name %></h3>
+<h1>Edit your profile</h1>
+
+<%= form_for :user do |f| %>
+
+  <div id="change-to-teacher">
+    <input type="checkbox" name="user[is_teacher]" id="is_teacher"><br><br>
+    <%= f.label 'I\'m a teacher!' %>
+  </div>
+
+  <% Course.all.each do |course| %>
+    <%= radio_button_tag 'user[course_id]', course.id %>
+    <label for="user_course_id_<%= course.id %>"name="course_id"><%= image_tag "logo-#{course.fileify}.jpg" %></label>
+  <% end %></br>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, placeholder: 'Jane Doe' %><br>
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: 'jane@fake.com' %><br>
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: 'password' %><br><br>
+
+  <%= f.submit 'Create User' %>
+<% end %>
