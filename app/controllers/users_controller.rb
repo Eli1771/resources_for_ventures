@@ -25,10 +25,15 @@ class UsersController < ApplicationController
 
     if auth
       @user = User.find_or_create_by_omniauth(auth)
-      session[:user_id] = @user.id
-      flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"
-      redirect_to @user.correct_user_path
+      if @user.save
+        session[:user_id] = @user.id
+        flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"
+        redirect_to @user.correct_user_path
+      else
+        render :new
+      end
     else
+      flash[:failure] = 'Sorry, there was an error connection with Facebook. Please try again.'
       render :new
     end
   end

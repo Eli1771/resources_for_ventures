@@ -35,5 +35,9 @@ class User < ApplicationRecord
     if self.is_teacher.nil?
       self.is_teacher = false
     end
+    if self.course_id.nil?
+      self.course_id = 1
+    end
+    self.save
   end
 end
