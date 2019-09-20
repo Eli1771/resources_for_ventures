@@ -7,6 +7,6 @@
 <% end %>
 
 <%= form_for @material, {url: '/materials'} do |f| %>
-  <%= render 'form' %>
+  <%= render partial: 'form', locals: {f: f} %>
   <%= f.submit %>
 <% end %>

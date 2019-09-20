@@ -1,6 +1,6 @@
 <h1>Edit <%= @material.name %></h1>
 
-<%= form_for @material, {url: "/materials/#{@material.id}/edit"} do |f| %>
-  <%= render 'form' %>
+<%= form_for @material, {url: "/materials/#{@material.id}"} do |f| %>
+  <%= render partial: 'form', locals: {f: f} %>
   <%= f.submit 'Edit Material'%>
 <% end %>

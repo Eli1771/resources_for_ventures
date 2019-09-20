@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   end
 
   resources :assignments, only: [:index, :show, :new, :create, :edit, :update]
-  resources :materials, only: [:index, :show, :new, :create]
+  resources :materials, only: [:index, :show, :new, :create, :edit, :update]
   resources :users, only: [:index, :show, :new, :create, :edit, :update]
 
   get '/signup', to: 'users#new'

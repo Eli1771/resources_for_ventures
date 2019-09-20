@@ -2,4 +2,6 @@
 
 <p><%= @material.description %></p>
 
-<%= link_to 'Visit Here', "http://#{@material.url}" %>
+<%= link_to 'Visit Here', "http://#{@material.url}" %><br><br>
+
+<%= link_to 'Edit Material', edit_material_path(@material) %>
