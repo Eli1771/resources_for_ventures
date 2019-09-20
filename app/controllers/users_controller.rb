@@ -26,12 +26,12 @@ class UsersController < ApplicationController
       if @user.save
         session[:user_id] = @user.id
         flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"
-        redirect_to edit_user_path(@user)
+        redirect_to @user.correct_user_path
       else
         render :new
       end
     else
-      flash[:failure] = 'Sorry, there was an error connection with Facebook. Please try again.'
+      flash[:failure] = 'Sorry, there was an error connecting to Facebook. Please try again.'
       render :new
     end
   end
@@ -43,6 +43,10 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     redirect_to @user.correct_user_path
+  end
+
+  def edit
+    @user = User.find(params[:id])
   end
 
   private
