@@ -3,7 +3,8 @@
 
 <ul>
   <% @materials.each do |material| %>
-    <li><%= link_to "#{material.name} - #{material.course.name}", course_material_path(material.course, material) %>
+    <li><%= link_to "#{material.name} - #{material.course.name}", course_material_path(material.course, material) %> -
+      <%= link_to "Edit", edit_material_path(material) %>
   <% end %>
 </ul><br>
 
