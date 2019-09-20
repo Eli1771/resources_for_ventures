@@ -25,6 +25,18 @@ class MaterialsController < ApplicationController
     @material = Material.find(params[:id])
   end
 
+  def edit
+    @material = Material.find(params[:id])
+  end
+
+  def update
+    @material = Material.find(params[:id])
+    @material.update(materials_params)
+    @material.save
+    flash[:success] = "Successfully updated #{@material.name}"
+    redirect_to material_path(@material)
+  end
+
   private
 
   def materials_params
