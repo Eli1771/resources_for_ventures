@@ -22,17 +22,22 @@ class UsersController < ApplicationController
 
   def fb_create
     binding.pry
-    @user = User.find_or_create_by(uid: auth['uid']) do |u|
-      u.name = auth['info']['name']
-      u.email = auth['info']['email']
-    end
-    if @user.save
-      session[:user_id] = @user.id
+
+    if auth
+      user = User.find_or_create_by_omniauth(auth)
+      session[:user_id] = user.id
       flash[:success] = "Welcome, #{@user.name}! Successfully signed up!"
-      redirect_to edit_user_path(@user)
+      redirect_to user.correct_user_path
     else
       render :new
     end
+
+
+
+    # @user = User.find_or_create_by(uid: auth['uid']) do |u|
+    #   u.name = auth['info']['name']
+    #   u.email = auth['info']['email']
+    # end
   end
 
   def index
