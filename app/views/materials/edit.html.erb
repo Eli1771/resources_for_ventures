@@ -1,0 +1,13 @@
+<h1>Edit <%= @material.name %></h1>
+
+<%= form_for @material, {url: "/materials/#{@material.id}/edit"} do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, value: "#{@material.name}" %><br>
+  <%= f.label 'Description (optional)' %>
+  <%= f.text_field :description, value: "#{@material.description}" %><br>
+  <%= f.label :url %>
+  <%= f.text_field :url, value: "#{@material.url}" %><br>
+  <%= course_id_field(@material) %><br>
+
+  <%= f.submit 'Edit Material'%>
+<% end %>
