@@ -8,7 +8,11 @@
   </div>
 
   <% Course.all.each do |course| %>
-    <input type="radio" name="user[course_id]" id="user_course_id_<%= course.id %>" <%= 'checked' if @user.course_id == course.id %>>
+    <input type="radio"
+      name="user[course_id]"
+      id="user_course_id_<%= course.id %>"
+      value="<%= course.id %>"
+      <%= 'checked' if @user.course_id == course.id %>>
     <label for="user_course_id_<%= course.id %>"name="course_id"><%= image_tag "logo-#{course.fileify}.jpg" %></label>
   <% end %></br>
 

@@ -152,11 +152,11 @@
    padding: .5em;
  }
 
- input#is_teacher {
-   display: none;
+ #change-to-teacher input#is_teacher {
+  visibility: hidden;
  }
 
- input#is_teacher:checked + label {
+ #change-to-teacher input#is_teacher:checked + label {
    padding: .5em;
    border: 2px solid #006ecc;
  }

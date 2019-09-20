@@ -7,7 +7,6 @@ class UsersController < ApplicationController
   end
 
   def create
-
     @user = User.new(user_params)
     if !!params[:facebook]
       redirect_to '/auth/facebook/callback'
@@ -57,6 +56,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
+    @user.is_teacher = params[:is_teacher]
     @user.save
     flash[:success] = 'You have successfully updated your profile!'
     redirect_to @user.correct_user_path
