@@ -6,10 +6,11 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-  <body>
+  <body class="<%= logged_in_style %>">
     <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
       <div class="container">
         <div class="navbar-header">
@@ -34,7 +35,7 @@
     </div>
 
     <!-- content -->
-    <div class="container main"  role="main">
+    <div class="container main-<%= logged_in_style %>"  role="main">
 
       <% flash.each do |key, value| %>
         <h4 class="flash <%= key %>"><%= value %></h4>

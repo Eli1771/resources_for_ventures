@@ -17,16 +17,18 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- body {
+ body.logged-out {
    padding-bottom: 30px;
    margin: 0px;
    font-family: sans-serif;
+ }
 
-   /* padding-bottom: 30px;
-    margin: 0px;
-    background: #ccc;
-    font-family: sans-serif;
-    color: #333; */
+ body.logged-in {
+   padding-bottom: 30px;
+   margin: 0px;
+   background: #ccc;
+   font-family: sans-serif;
+   color: #333;
  }
 
  a {
@@ -95,6 +97,18 @@
  }
 
  h1 {
+   position: absolute;
+   display: block;
+   width: 100%;
+   top: -10vw;
+   text-align: center;
+   font-size: 3.5em;
+   color: #333;
+   margin: 1em;
+   margin-left: 1vw;
+ }
+
+ h1.logged-out {
    position: relative;
    top: -1vw;
    text-align: center;
@@ -102,16 +116,6 @@
    color: #ccc;
    margin: 1em;
    margin-left: 12vw;
-
-   /* position: absolute;
-    display: block;
-    width: 100%;
-    top: -10vw;
-    text-align: center;
-    font-size: 3.5em;
-    color: #333;
-    margin: 1em;
-    margin-left: 1vw; */
  }
 
  h2 {
@@ -133,21 +137,23 @@
    text-align: center;
  }
 
- .main {
+ .main-logged-in {
+   position: relative;
+   margin: 20px;
+   width: 92%;
+   height: min-content;
+   display: block;
+   top: 12vw;
+   padding: 2em;
+   background: white;
+   border: 1px solid #333;
+   border-radius: 40px;
+ }
+
+ .main-logged-out {
    position: relative;
    margin: 20px;
    top: 5vw;
-
-   /* position: relative;
-    margin: 20px;
-    width: 92%;
-    height: min-content;
-    display: block;
-    top: 12vw;
-    padding: 2em;
-    background: white;
-    border: 1px solid #333;
-    border-radius: 40px; */
  }
 
  .interactive {

@@ -34,4 +34,8 @@ module SessionsHelper
   def viewing_current_user?(user)
     current_user.id == user.id ? true : false
   end
+
+  def logged_in_style
+    logged_in? ? 'logged-in' : 'logged-out'
+  end
 end
