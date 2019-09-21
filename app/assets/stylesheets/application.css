@@ -21,6 +21,11 @@
    padding-bottom: 30px;
    margin: 0px;
    font-family: sans-serif;
+
+   /* padding-bottom: 30px;
+    margin: 0px;
+    background: #ccc;
+    font-family: sans-serif; */
  }
 
  a {
@@ -41,9 +46,14 @@
  }
 
  .navbar-header {
+   display: block;
+   position: fixed;
    height: 81px;
+   width: 100%;
+   top: 0;
    background: #333;
    color: #eee;
+   z-index: 1;
  }
 
  .navbar-header a {
@@ -83,13 +93,29 @@
    opacity: .7;
  }
 
- .icon-header {
+ h1 {
    position: relative;
-   top: -5vw;
+   top: -1vw;
    text-align: center;
    font-size: 3.5em;
    color: #ccc;
    margin: 1em;
+   margin-left: 12vw;
+
+   /* position: absolute;
+    display: block;
+    width: 100%;
+    top: -10vw;
+    text-align: center;
+    font-size: 3.5em;
+    color: #333;
+    margin: 1em;
+    margin-left: 1vw; */
+ }
+
+ h2 {
+   font-size: 2.4em;
+   margin: .3em 0;
  }
 
  .theme-dropdown .dropdown-menu {
@@ -109,7 +135,18 @@
  .main {
    position: relative;
    margin: 20px;
-   top: 4vw;
+   top: 5vw;
+
+   /* position: relative;
+    margin: 20px;
+    width: 92%;
+    height: min-content;
+    display: block;
+    top: 12vw;
+    padding: 2em;
+    background: white;
+    border: 1px solid #333;
+    border-radius: 40px; */
  }
 
  .interactive {
@@ -119,6 +156,15 @@
  .data-container {
    width: 45%;
    margin: 1vw;
+ }
+
+ .data-container p {
+   font-weight: bolder;
+   text-decoration: underline;
+ }
+
+ .data-container li {
+   margin: 1em 0;
  }
 
  .pic,

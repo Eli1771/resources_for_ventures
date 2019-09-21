@@ -1,8 +1,17 @@
 <h1>Teacher Homepage</h1>
-<h3><%= @teacher.name %></h3>
+<h2><%= @teacher.name %></h2>
 <h3><%= @teacher.course.name %></h3>
 
 <div class="interactive">
+  <div class="data-container">
+    <p>Your students</p>
+    <ul>
+      <% @students.each do |student| %>
+        <li><%= link_to student.name, student.correct_user_path %>
+      <% end %>
+    </ul>
+  </div>
+
   <div class="data-container">
     <% if viewing_current_user?(@teacher) %>
       <p>Your assignments</p>
@@ -16,15 +25,6 @@
         <% end %>
       </ul>
     <% end %>
-  </div>
-
-  <div class="data-container">
-    <p>Your students</p>
-    <ul>
-      <% @students.each do |student| %>
-        <li><%= link_to student.name, student.correct_user_path %>
-      <% end %>
-    </ul>
   </div>
 </div>
 
