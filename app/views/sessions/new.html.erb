@@ -8,4 +8,8 @@
   <%= f.submit 'Sign In' %>
 <% end %>
 
-<br><%= link_to 'Log in with Facebook!', '/auth/facebook' %>
+<section class="fb-divider">
+  <a href="/auth/facebook" class="fb-link">
+    <label>Or sign in with Facebook!</label><%= image_tag 'facebook-icon.png' %>
+  </a>
+</section>

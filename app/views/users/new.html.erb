@@ -7,24 +7,30 @@
 <% end %>
 
 <%= form_for :user do |f| %>
-  <%= link_to 'Log in with Facebook!', '/auth/facebook' %><br><br>
+  <a href="/auth/facebook" class="fb-link">
+    <label>Sign up with Facebook!</label><%= image_tag 'facebook-icon.png' %>
+  </a>
 
-  <h4>Or Sign Up Manually</h4>
+  <section class="fb-divider">
+    <h4>Or Sign Up Manually</h4>
 
-  <%= f.label 'Check this box if you are an instructor' %>
-  <input type="checkbox" name="user[is_teacher]" id="is_teacher"><br><br>
+    <%= f.label 'Check this box if you are an instructor' %>
+    <input type="checkbox" name="user[is_teacher]" id="is_teacher"><br><br>
 
-  <% Course.all.each do |course| %>
-    <%= radio_button_tag 'user[course_id]', course.id %>
-    <label for="user_course_id_<%= course.id %>"name="course_id"><%= image_tag "logo-#{course.fileify}.jpg" %></label>
-  <% end %></br>
+    <div class="course-select">
+      <% Course.all.each do |course| %>
+        <%= radio_button_tag 'user[course_id]', course.id %>
+        <label for="user_course_id_<%= course.id %>"name="course_id"><%= image_tag "logo-#{course.fileify}.jpg" %></label>
+      <% end %></br>
+    </div>
 
-  <%= f.label :name %>
-  <%= f.text_field :name, placeholder: 'Jane Doe' %><br>
-  <%= f.label :email %>
-  <%= f.text_field :email, placeholder: 'jane@fake.com' %><br>
-  <%= f.label :password %>
-  <%= f.password_field :password, placeholder: 'password' %><br><br>
+    <%= f.label :name %>
+    <%= f.text_field :name, placeholder: 'Jane Doe' %><br>
+    <%= f.label :email %>
+    <%= f.text_field :email, placeholder: 'jane@fake.com' %><br>
+    <%= f.label :password %>
+    <%= f.password_field :password, placeholder: 'password' %><br><br>
 
-  <%= f.submit 'Create User' %>
+    <%= f.submit 'Create User' %>
+  </section>
 <% end %>
