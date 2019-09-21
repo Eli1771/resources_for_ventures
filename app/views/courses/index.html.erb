@@ -1,7 +1,7 @@
-<h1>All courses</h1>
+<h1>Materials By Course</h1>
 
-<ul>
+<div class="course-index">
   <% @courses.each do |course| %>
-    <li><%= link_to course.name, course_materials_path(course) %></li>
+    <p id="course-materials-<%= course.fileify %>"><%= link_to course.name, course_materials_path(course) %></p>
   <% end %>
-</ul>
+</div>

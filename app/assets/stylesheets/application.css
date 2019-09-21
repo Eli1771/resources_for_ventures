@@ -25,7 +25,8 @@
    /* padding-bottom: 30px;
     margin: 0px;
     background: #ccc;
-    font-family: sans-serif; */
+    font-family: sans-serif;
+    color: #333; */
  }
 
  a {
@@ -263,3 +264,40 @@
    padding: .5em;
    bottom: .25em;
  }
+
+ div.course-index p {
+   width: 100%;
+   text-align: center;
+   font-size: 1.3em;
+   border-radius: 8px;
+   padding: .3em;
+}
+
+div.course-index a {
+  display: block;
+  width: 100%;
+}
+
+div.course-index p:hover {
+  background: #ccc;
+}
+
+p#course-materials-basic {
+  border: 3px solid #fbcc33;
+}
+
+p#course-materials-level-1 {
+  border: 3px solid #c7392b;
+}
+
+p#course-materials-level-2 {
+  border: 3px solid #065eb6;
+}
+
+p#course-materials-level-3 {
+  border: 3px solid #367835;
+}
+
+p#course-materials-level-4 {
+  border: 3px solid #5c297f;
+}
