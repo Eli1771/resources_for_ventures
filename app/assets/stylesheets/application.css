@@ -71,15 +71,25 @@
    background: white;
    border-radius: 100%;
    border: 5px solid #333;
-   top: -7vw;
+   top: -6vw;
    left: -4vw;
+ }
+
+ .course-icon-container img {
+   position: absolute;
+   width: 20.1vw;
+   height: 20.1vw;
+   border-radius: 100%;
+   opacity: .7;
  }
 
  .icon-header {
    position: relative;
    top: -5vw;
-   font-size: 3em;
-   color: #808080;
+   text-align: center;
+   font-size: 3.5em;
+   color: #ccc;
+   margin: 1em;
  }
 
  .theme-dropdown .dropdown-menu {
@@ -165,6 +175,10 @@
    display: none
  }
 
+ div.course-select {
+   margin: 3vw 0;
+ }
+
  div.course-select img {
    height: 15em;
    width: 15em;
@@ -188,17 +202,18 @@
  }
 
  section.fb-divider {
-   padding-top: 4vh;
+   padding-top: 8vh;
    border-top: 1px solid #ccc;
-   margin-top: 3vh;
+   margin-top: 8vh;
  }
 
  a.fb-link img {
-   height: 1.5em;
+   height: 3em;
  }
 
  a.fb-link label {
    position: relative;
+   font-size: 2.2em;
    padding: .5em;
    bottom: .25em;
  }
