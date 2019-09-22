@@ -4,4 +4,6 @@
   <% @courses.each do |course| %>
     <p class="border-<%= course.fileify %>"><%= link_to course.name, course_materials_path(course) %></p>
   <% end %>
-</div>
+</div><br>
+
+<%= link_to 'BACK', materials_path %>

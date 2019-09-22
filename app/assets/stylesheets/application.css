@@ -325,3 +325,9 @@ ul#all-materials li {
 ul#all-materials li:hover {
   background: #ccc;
 }
+
+#material-show {
+  width: max-content;
+  margin: auto;
+  text-align: center;
+}
