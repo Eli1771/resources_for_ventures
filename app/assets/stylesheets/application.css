@@ -67,6 +67,14 @@
    padding: 10px 2vw 10px 2vw;
  }
 
+ .logged_in .navbar-header a {
+   position: initial;
+ }
+
+ .logged_out .navbar-header a {
+   position: relative;
+ }
+
  .navbar-brand {
    position: relative;
    top: -18vw;
@@ -90,9 +98,11 @@
 
  .course-icon-container img {
    position: absolute;
-   width: 18.1em;
-   height: 18.1em;
+   width: 100%;
+   height: 100%;
    border-radius: 100%;
+   right: 0%;
+   top: 0%;
  }
 
  h1 {
@@ -205,9 +215,9 @@
  }
 
  #change-to-teacher {
-   position: fixed;
-   bottom: 2vh;
-   right: 2vh;
+   position: absolute;
+   bottom: 4%;
+   right: 3%;
  }
 
  #change-to-teacher label {
