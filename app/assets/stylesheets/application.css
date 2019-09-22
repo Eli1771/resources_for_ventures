@@ -139,8 +139,8 @@
 
  .main-logged-in {
    position: relative;
-   margin: 20px;
-   width: 92%;
+   margin: auto;
+   width: 88%;
    height: min-content;
    display: block;
    top: 12vw;
@@ -306,4 +306,13 @@ p#course-materials-level-3 {
 
 p#course-materials-level-4 {
   border: 3px solid #5c297f;
+}
+
+table.assignments-list td {
+  width: 9%;
+  height: 1.5em;
+}
+
+table.assignments-list tr:nth-child(odd) {
+  background: #ccc;
 }

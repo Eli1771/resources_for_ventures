@@ -15,15 +15,15 @@
   <div class="data-container">
     <% if viewing_current_user?(@teacher) %>
       <p>Your assignments</p>
-      <ul>
+      <table class="assignments-list">
         <% @assignments.each do |assignment| %>
-          <li>
-            <%= link_to assignment.user.name, user_path(assignment.user) %> -
-            <%= link_to assignment.material.name, material_path(assignment.material) %> -
-            <%= viewed_or_not(assignment) %>
-          </li>
+          <tr>
+            <td><%= link_to assignment.user.name, user_path(assignment.user) %></td>
+            <td><%= link_to assignment.material.name, material_path(assignment.material) %></td>
+            <td><%= viewed_or_not(assignment) %></td>
+          </tr>
         <% end %>
-      </ul>
+      </table>
     <% end %>
   </div>
 </div>
