@@ -2,6 +2,6 @@
 
 <div class="course-index">
   <% @courses.each do |course| %>
-    <p id="course-materials-<%= course.fileify %>"><%= link_to course.name, course_materials_path(course) %></p>
+    <p class="border-<%= course.fileify %>"><%= link_to course.name, course_materials_path(course) %></p>
   <% end %>
 </div>
