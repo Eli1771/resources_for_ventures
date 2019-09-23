@@ -67,11 +67,11 @@
    padding: 10px 2vw 10px 2vw;
  }
 
- .logged_in .navbar-header a {
+ .logged-in .navbar-header a {
    position: initial;
  }
 
- .logged_out .navbar-header a {
+ .logged-out .navbar-header a {
    position: relative;
  }
 
@@ -119,7 +119,7 @@
 
  h1.logged-out {
    position: relative;
-   top: -1vw;
+   top: -4vw;
    text-align: center;
    font-size: 3.5em;
    color: #ccc;
@@ -162,7 +162,7 @@
  .main-logged-out {
    position: relative;
    margin: 20px;
-   top: 5vw;
+   top: 7vw;
  }
 
  .interactive {
@@ -212,6 +212,11 @@
  .failure {
    background: #fdd7d7;
    color: red;
+ }
+
+ .logged-out .failure, .logged-out .success {
+   top: 3em;
+   position: absolute;
  }
 
  #change-to-teacher {
