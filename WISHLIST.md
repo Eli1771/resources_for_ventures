@@ -21,3 +21,6 @@ In user views, you can click the main icon to access a dropdown menu to change y
 -Set basic layouts for mobile
 -Use partials to format view pages with course-level themes *
 -Teachers shouldn't be able to mark students' assignments as viewed
+-Optional user images
+-Searchability
+-Simple messaging capability

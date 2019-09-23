@@ -5,20 +5,13 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* System dependencies - This application is currently only configured for   chrome. Also, FB login app is still in development mode. Contact developer  https://github.com/Eli1771 to have profiles added to the test user list.  Install dependencies by running:
+  $bundle install
 
-* System dependencies
 
-* Configuration
+* Database creation - After forking and cloning this repo, run:
+  $rake db:migrate
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Deployment instructions - Run internal rails server:
+  $rails s
+  Navigate in browser to https://localhost:3000/
