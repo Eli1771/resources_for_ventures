@@ -56,7 +56,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     @user.update(user_params)
-    @user.is_teacher = params[:is_teacher]
+    @user.is_teacher = params[:user][:is_teacher]
     @user.save
     flash[:success] = 'You have successfully updated your profile!'
     redirect_to @user.correct_user_path
