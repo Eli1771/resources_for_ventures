@@ -5,6 +5,8 @@ class AssignmentsController < ApplicationController
 
   def create
     #ensure you can't edit html to select teacher
+
+    #Assingment.new first for error hangling
     @assignment = Assignment.create(assignment_params)
     redirect_to assignment_path(@assignment)
   end
